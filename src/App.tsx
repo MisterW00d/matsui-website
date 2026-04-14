@@ -28,7 +28,8 @@ function App() {
           width={24}
           height={24}
           cr={1}
-          className="text-[#2e2e36] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]"
+          glow
+          className="text-[#6e11b0] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]"
         />
 
         {/* Centered content */}
