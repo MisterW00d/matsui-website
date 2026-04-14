@@ -18,81 +18,84 @@ function App() {
         />
       </div>
 
-      {/* Main card */}
+      {/* Main card with dot pattern */}
       <div
-        className="relative z-10 h-full rounded-2xl border flex flex-col overflow-hidden"
+        className="relative z-10 h-full rounded-2xl border overflow-hidden"
         style={{ backgroundColor: "#141416", borderColor: "#222226" }}
       >
-        {/* Dot pattern with radial mask */}
         <DotPattern
           gap={24}
-          radius={1}
-          dotColor="rgba(46, 46, 54, 0.5)"
+          dotSize={2}
+          baseColor="#2e2e36"
           glowColor="#6e11b0"
-          glowRadius={180}
-          className="[mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]"
-        />
-
-        {/* Centered content */}
-        <div className="flex-1 flex flex-col items-center justify-center relative z-10 gap-6 px-6">
-          {/* Eyebrow */}
-          <p
-            className="text-[11px] font-medium uppercase tracking-[0.25em] animate-fade-up"
-            style={{ color: "#4a4a52", animationDelay: "0ms", animationFillMode: "both" }}
-          >
-            AI &amp; Operations · Torino, IT
-          </p>
-
-          {/* Wordmark */}
-          <h1
-            className="font-black uppercase leading-none animate-fade-up"
-            style={{
-              fontSize: "clamp(72px, 10vw, 128px)",
-              color: "#2e2e36",
-              animationDelay: "100ms",
-              animationFillMode: "both",
-            }}
-          >
-            MATSUI
-          </h1>
-
-          {/* Payoff */}
-          <p
-            className="text-sm font-light uppercase tracking-[0.2em] animate-fade-up"
-            style={{ color: "#72727e", animationDelay: "200ms", animationFillMode: "both" }}
-          >
-            So, business?
-          </p>
-
-          {/* Purple line */}
-          <div
-            className="w-[30px] h-px animate-fade-up"
-            style={{ backgroundColor: "#6e11b0", animationDelay: "300ms", animationFillMode: "both" }}
-          />
-
-          {/* Description */}
-          <p
-            className="text-sm font-light max-w-md text-center leading-relaxed animate-fade-up"
-            style={{ color: "#72727e", animationDelay: "400ms", animationFillMode: "both" }}
-          >
-            We help businesses move faster and smarter. AI integration and
-            operations consulting — from strategy to execution, without the
-            noise.
-          </p>
-        </div>
-
-        {/* Footer */}
-        <footer
-          className="relative z-10 flex items-center justify-between px-6 py-4 border-t animate-fade-up"
-          style={{ borderColor: "#222226", animationDelay: "500ms", animationFillMode: "both" }}
+          proximity={150}
+          glowIntensity={1.2}
+          waveSpeed={0.3}
+          className="h-full w-full"
         >
-          <span className="text-[11px]" style={{ color: "#4a4a52" }}>
-            © 2026 Matsui SRL Società Benefit
-          </span>
-          <span className="text-[11px]" style={{ color: "#4a4a52" }}>
-            P.IVA IT 12990710019 · CF 12990710019 · company [at] matsui.business
-          </span>
-        </footer>
+          <div className="flex flex-col h-full">
+            {/* Centered content */}
+            <div className="flex-1 flex flex-col items-center justify-center gap-6 px-6">
+              {/* Eyebrow */}
+              <p
+                className="text-[11px] font-medium uppercase tracking-[0.25em] animate-fade-up"
+                style={{ color: "#4a4a52", animationDelay: "0ms", animationFillMode: "both" }}
+              >
+                AI &amp; Operations · Torino, IT
+              </p>
+
+              {/* Wordmark */}
+              <h1
+                className="font-black uppercase leading-none animate-fade-up"
+                style={{
+                  fontSize: "clamp(72px, 10vw, 128px)",
+                  color: "#2e2e36",
+                  animationDelay: "100ms",
+                  animationFillMode: "both",
+                }}
+              >
+                MATSUI
+              </h1>
+
+              {/* Payoff */}
+              <p
+                className="text-sm font-light uppercase tracking-[0.2em] animate-fade-up"
+                style={{ color: "#72727e", animationDelay: "200ms", animationFillMode: "both" }}
+              >
+                So, business?
+              </p>
+
+              {/* Purple line */}
+              <div
+                className="w-[30px] h-px animate-fade-up"
+                style={{ backgroundColor: "#6e11b0", animationDelay: "300ms", animationFillMode: "both" }}
+              />
+
+              {/* Description */}
+              <p
+                className="text-sm font-light max-w-md text-center leading-relaxed animate-fade-up"
+                style={{ color: "#72727e", animationDelay: "400ms", animationFillMode: "both" }}
+              >
+                We help businesses move faster and smarter. AI integration and
+                operations consulting — from strategy to execution, without the
+                noise.
+              </p>
+            </div>
+
+            {/* Footer */}
+            <footer
+              className="flex items-center justify-between px-6 py-4 border-t animate-fade-up"
+              style={{ borderColor: "#222226", animationDelay: "500ms", animationFillMode: "both" }}
+            >
+              <span className="text-[11px]" style={{ color: "#4a4a52" }}>
+                © 2026 Matsui SRL Società Benefit
+              </span>
+              <span className="text-[11px]" style={{ color: "#4a4a52" }}>
+                P.IVA IT 12990710019 · CF 12990710019 · company [at] matsui.business
+              </span>
+            </footer>
+          </div>
+        </DotPattern>
       </div>
     </div>
   )
