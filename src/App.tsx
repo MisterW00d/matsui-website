@@ -25,11 +25,12 @@ function App() {
       >
         {/* Dot pattern with radial mask */}
         <DotPattern
-          width={24}
-          height={24}
-          cr={1}
-          glow
-          className="text-[#6e11b0] [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]"
+          gap={24}
+          radius={1}
+          dotColor="rgba(46, 46, 54, 0.5)"
+          glowColor="#6e11b0"
+          glowRadius={180}
+          className="[mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]"
         />
 
         {/* Centered content */}
