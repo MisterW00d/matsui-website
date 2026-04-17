@@ -46,8 +46,9 @@ function App() {
 
               {/* Wordmark */}
               <h1
-                className="font-black uppercase leading-none animate-fade-up"
+                className="uppercase leading-none animate-fade-up"
                 style={{
+                  fontFamily: "'Aldrich', sans-serif",
                   fontSize: "clamp(72px, 10vw, 128px)",
                   color: "#2e2e36",
                   animationDelay: "100ms",
